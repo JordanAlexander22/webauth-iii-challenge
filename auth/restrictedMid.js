@@ -1,6 +1,7 @@
-import jwt from 'jsonwebtoken';
+const jwt = require('jsonwebtoken');
+const express= require('express');
 
-export default (req, res, next) => {
+ module.exports= (req, res, next) => {
   const token = req.headers['authorization'];
   if (!token) return res.status(401).json({ message: 'You shall not pass!' });
 

@@ -1,4 +1,4 @@
-import db from "../db-config";
+const db = require("../db-config");
 
 const findUser = () => {
   return db("users").select("id", "username", "department");
@@ -23,4 +23,4 @@ const add = async user => {
   return findById(id);
 };
 
-export default { findUser, findById, findBy, add };
+module.exports = { findUser, findById, findBy, add };

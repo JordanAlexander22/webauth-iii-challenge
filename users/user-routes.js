@@ -1,6 +1,6 @@
-import express from 'express';
-import UsersModel from './user-model';
-import restricted from '../auth/restrictedMid';
+const express = require('express');
+const UsersModel = require('./user-model');
+const restricted = require('../auth/restrictedMid');
 
 const router = express.Router();
 
@@ -25,4 +25,4 @@ router.get('/:id', restricted, async (req, res) => {
   }
 });
 
-export default router;
+module.exports= router;
